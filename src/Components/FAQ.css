@@ -4,6 +4,8 @@
     Display:flex;
     justify-content: center;
     flex-wrap:wrap;
+    align-items:space-between;
+    min-height:110vh;
 }
 
 .FAQ h1 {
@@ -18,7 +20,7 @@
 flex: 0 1 1500px;
 display:flex;
 flex-wrap:wrap;
-
+margin-bottom:5rem;
 }
 
 .FAQ .Question {

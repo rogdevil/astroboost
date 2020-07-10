@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Question from "./Question.js"
+import Footer from "./Footer"
 import "./FAQ.css"
 
 
@@ -35,7 +36,7 @@ export default class FAQ extends Component {
     Curabitur efficitur nibh ante. Aliquam sit amet scelerisque velit, id convallis risus."
     },
     ]}
-    
+
     render() {
         return (
             <div className = "FAQ">
@@ -43,6 +44,7 @@ export default class FAQ extends Component {
                 {this.state.questionList.map(question =>  
                 <Question title = {question.title} body = {question.body} />)
                 }
+                <Footer />
             </div>
         )
     }
