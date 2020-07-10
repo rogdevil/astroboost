@@ -54,12 +54,12 @@ class Home extends Component {
 
               <div className="our-goals">
                   <p className="our-goals-heading red">Our Goals</p>
-                  <p className="white">We are one of a kind, there are a lot competitor in the market but we are special, 
-                      we have our priorities, the important 
+                  <p className="white">We are one of a kind, there are a lot competitors in the market but we are special, 
+                      we prioritize the important 
                       things that would benefit the customers the most to build a huge customer base.</p>
                   <div className="priority-container">
                     <Priority number="01"  heading="PREMIUM LOL BOOSTING EXPERIENCE"  description="Our philosophy is to provide the best LoL ELO boosting experience on the internet. BoostForLoL continuously improves and innovates its service offering while focusing on customer needs, making it possible to stay the best and number one service provider when it comes to LoL ELO boosting." />
-                    <Priority number="02"  heading="FAST & INSTANT DELIVERY"  description="BoostForLoL employs challenger boosters performing high win-rates in all ranks of the game. It is an effort which is required to stay at the top in terms of LoL boosting speed and performance. Our ELO boosting services guarantee the fastest results and generally an instant start after placing an order." />
+                    <Priority number="02"  heading="FAST & INSTANT DELIVERY"  description="AstroBoost uses Grandmaster and Challenger boosters who perform with high win-rates in all ranks. We think this is the best way to maintain the professional speed and performance of our service. Our ELO boosting services guarantee the fastest results." />
                     <Priority number="03"  heading="TOP SAFETY & PRIVACY"  description="BoostForLoL provides the safest lol elo boost experience available. The company implemented various measures in its boosting mechanism with the goal of creating the safest and most private way of elo boosting available. All data that flows through the site is encrypted with SSL technology to protect privacy." />
                     <Priority number="04"  heading="COST-EFFICIENT LOL BOOST SOLUTION"  description="LoL elo boosts from BoostForLoL are available at the cheapest prices. The company continuously manages to keep the base pricing low to benefit players who are looking to buy a lol elo boost for their accounts. Additionally, by offering continuous discounts and coupon codes for our clients, we make sure that our pricing stays competitive." />
                   </div>
