@@ -111,7 +111,7 @@ width:100%;
 }
 
 .Contact form .checkbox:checked {
-background-image: url("./checkmark.png");
+background-image: url("../images/checkmark.png");
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;

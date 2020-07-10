@@ -1,0 +1,63 @@
+.FAQ {
+    margin-top:8rem;
+    color:white;
+    Display:flex;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+
+.FAQ h1 {
+    width:100vw;
+    color:#ff005e;
+    text-align: center;
+    margin-bottom:4rem;
+    font-size:3rem;
+}
+
+.FAQ .Questions {
+flex: 0 1 1500px;
+display:flex;
+flex-wrap:wrap;
+
+}
+
+.FAQ .Question {
+    height:2.4rem;
+    line-height: 1rem;
+    overflow: hidden;
+    transition: 0.5s;
+    flex: 0 1 900px;
+    margin-left:10rem;
+    margin-right:10rem;
+}
+
+.FAQ .Question h2 {
+    font-size:1.7rem;
+    margin-bottom:1rem;
+    
+    display: inline-block;
+   
+}
+
+.FAQ .Question p {
+    font-size:1.1rem;
+    line-height:1.2rem;
+}
+
+.FAQ .Question button {
+    transform: rotate(-6deg);
+    background-image: url("../images/arrow_icon.png");
+    margin-left:1rem;
+    height:1.5rem;
+    width:1.5rem;
+    margin-bottom:-0.1rem;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    outline: none;
+    border:none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.3s;
+    
+}
