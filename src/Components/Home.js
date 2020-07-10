@@ -23,7 +23,7 @@ class Home extends Component {
                   </div>
                   <img src={require("../images/lolgirlimage.png")} alt="lol girl" />
               </div>
-
+              
               <div className="home-page-boosting-features">
                 <h2>
                     <span className="red" style={{letterSpacing: "0.1em", fontSize: "28px"}}>ASTRO</span>
