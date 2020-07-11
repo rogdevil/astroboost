@@ -59,12 +59,12 @@ body {
       justify-content: space-around;
       background-color: var(--main-bg-color);
       /*padding: 0.3em;*/
-      border-radius: 0.5em;
-      border: 0.1em solid var(main-balck);
+      border-bottom: 0.1em solid var(--main-fg-color);
       align-items: center;
       position: fixed;
       width: 100%;
       top: 0;
+      margin-bottom: 1em;
   }
 
 
@@ -264,6 +264,8 @@ body {
       width: 550px;
   }
 
+  /* here is css of footer */
+
   .footer {
       display: flex;
       flex-direction: column;
@@ -272,6 +274,7 @@ body {
       background-color: var(--main-bg-color);
       padding: 1.5em;
       border-radius: 1em;
+      margin: 0em auto;
   }
 
   .fab {
@@ -296,6 +299,9 @@ body {
     text-align: center;
     margin-top: 2em;
   }
+
+  /* footer end */
+  /* stats start */
 
   .stats {
       display: grid;
@@ -325,7 +331,241 @@ body {
   .stat-description {
       font-size: 20px;
   }
- 
+  /* stats end */
+ /* css for boosting page */
+
+  .boosting-page {
+      margin-top: 10em;
+  }
+
+  .boosting-heading > ul {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      width: 300px;
+      justify-content: space-around;
+      align-items: center;
+  }
+
+  .boosting-heading>ul>li :hover, :focus {
+    border-bottom: 0.15em solid var(--main-fg-color);
+
+  }
+
+  .boosting-heading>ul>li>a{
+      text-decoration: none;
+      color: var(--main-white);
+      font-size: 32px;
+      font-weight: medium;     
+  } 
+  .boosting-heading>ul>li>a:hover {
+      color: var(--main-fg-color);
+  }
+
+  .boosting-heading>ul>li>a:focus {
+      background-color: var(--main-balck);
+      color: var(--main-fg-color);
+  }
+
+  /* css for selection card */
+
+  .selection-card-container {
+      display: flex;
+      flex-direction: row;
+      width: 800px;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  .selection-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: var(--main-bg-color);
+      width: 300px;
+      border-radius: 1em;
+      padding: 2em 1em;
+      margin: 5em 2em;
+  }
+
+   .selection-card > img {
+       height: 100px;
+       width: 90px;
+   }
+
+   .rank {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 2em auto;
+   }
+
+   .rank-name {
+       color: var(--main-fg-color);
+       font-size: 1.5em;
+       cursor: pointer;
+   }
+
+   .rank-tier {
+       color: var(--main-white);
+       font-weight: bold;
+   }
+
+   .server-lp {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 250px;
+   }
+
+   .server-lp >div {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+   }
+
+   /* modal starts */
+   .modal {
+        position: fixed;
+        z-index: 500;
+        background-color: rgba(0, 0, 0, 0.83);
+        width: 100%;
+        height: 100%;
+        padding: 16px;
+        box-sizing: border-box;
+        transition: all 3s ease-out;
+        display: none;
+   }
+   /* modal end */
+
+   .league-modal {
+       display: flex;
+       flex-direction: row;
+       justify-content: space-around;
+       height: 100%;
+       width: 100%;
+       align-items: center;
+       vertical-align: middle;
+       margin-top: 1em;
+   }
+
+   .league {
+       display: flex;
+       flex-direction: column;
+       vertical-align: middle;
+       align-items: center;
+   }
+
+   .league > img {
+       width: 130px;
+       height: 150px;
+   }
+
+    .league-list {
+       list-style: none;
+       color: white;
+   }
+
+    .league-list > li > p {
+       text-decoration: none;
+       color: var(--main-white);
+       cursor: pointer;
+       font-size: 1.5em;
+   }
+
+    .league-list > li > p:hover {
+       color: var(--main-fg-color);
+       cursor: pointer;
+       background-color: rgba(0, 0, 0, 0.83);
+       border: none;
+   }
+
+    .league-list > li > p:focus{
+    color: var(--main-fg-color);
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.83);
+    border: none;
+   }
+
+   .server-modal {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        height: 100%;
+        width: 50%;
+        margin: 0 auto;
+        align-items: center;
+        vertical-align: middle;
+        margin-top: 1em;
+    }
+
+    .server {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: var(--main-white);
+    }
+
+    .server > p {
+        color: inherit;
+        font-size: 1.5em;
+        margin-top: 0.7em;
+    }
+
+    
+
+    .league-point-modal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        width: 50%;
+        margin: 0 auto;
+        align-items: center;
+        vertical-align: middle;
+        margin-top: 1em;
+    }
+
+    .league-point-modal > h2 {
+        color: var(--main-fg-color);
+        margin-bottom: 1.5em;
+        vertical-align: middle;
+    }
+
+    .points {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        color: var(--main-white);
+        font-size: 1.5em;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .warning {
+        color: var(--main-fg-color);
+        font-size: 1.5em;
+        margin-top: 20em;
+        margin: 20em auto;
+        text-align: center;
+    }
+
+    .average-time-to-boost {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;    
+    }
+
+    .average-time-to-boost > div {
+        text-align: center;
+        margin: 0.5em auto;
+    }
+
+
+
+
+    
 }
 
 

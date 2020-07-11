@@ -4,6 +4,8 @@ import Navbar from './Components/Navbar'
 import Home from './Components/Home'
 import MobileNav from './Components/MobileNav'
 import { Switch, Route } from 'react-router-dom'
+import Booster from './Components/Booster';
+
 
 function App() {
   return (
@@ -14,7 +16,10 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
-          </Switch>
+            <Route path="/boosting">
+              <Booster />
+            </Route>
+        </Switch>
       </React.Fragment>
   );
 }
