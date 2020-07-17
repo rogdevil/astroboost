@@ -512,7 +512,20 @@ body {
         margin-top: 0.7em;
     }
 
-    
+    .server > p {
+        cursor: pointer;
+    }
+
+    .queue-image {
+        width: 200px;
+        height: 90px;
+    }
+
+    .grey-background {
+        background-color: var(--main-balck);
+        padding: 1em;
+        border-radius: 1em;
+    }
 
     .league-point-modal {
         display: flex;

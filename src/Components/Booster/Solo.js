@@ -1,14 +1,7 @@
 import React, { Component } from 'react'
-import SelectionCard from './SelectionCard'
+import { SelectionCard } from '../Booster Page/SelectionCard';
 
 class Solo extends Component {
-    constructor(props) {
-        super(props)
-
-        this.state = {
-                 
-        }
-    }
 
     render() {
         return (
