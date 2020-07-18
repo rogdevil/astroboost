@@ -13,7 +13,8 @@ import QueueModel from './QueueModel';
 import ServerModel from './ServerModel';
 import LeaguePointModal from './LeaguePointModal';
 import WarningModal from './WarningModal';
-import SoloNormal from './SoloNormal';
+//import SoloNormal from './SoloNormal';
+import SoloNetWins from './SoloNetWins';
 
 export const UserOrderContext = createContext({});
 
@@ -35,6 +36,7 @@ export function SelectionCard() {
     const [destinedImage, setDestinedImage] = useState(secondrank);
     const [leaguePoint, setLeaguePoint] = useState("0-20");
     const [tooglewarning, setTooglewarning] = useState("none");
+    const [netWins, setNetWins] = useState("0");
 
     const UserOrderInfo = {
         showModalone: {get: showModalone, set: setShowModalone},
@@ -51,14 +53,15 @@ export function SelectionCard() {
         destinedImage: {get: destinedImage, set: setDestinedImage},
         leaguePoint: {get: leaguePoint, set: setLeaguePoint},
         tooglewarning: {get: tooglewarning, set: setTooglewarning},
-        rankOrder: {get: rankOrder}
+        rankOrder: {get: rankOrder},
+        netWins: {get: netWins, set: setNetWins}
     }
 
     useEffect(
         () => {
         assignRankIcon();
         checkRank();
-        }, [destinedRank, initialRank]
+        }, [UserOrderInfo.destinedRank.get, UserOrderInfo.initialRank.get]
     );
 
     const assignRankIcon = () => {
@@ -115,14 +118,15 @@ export function SelectionCard() {
         <UserOrderContext.Provider value={UserOrderInfo}>
             <React.Fragment>
                 <div className='selection-card-container'>
-                    <SoloNormal />
+                    
+
+                    <SoloNetWins />
                     <InitialRankModal />
                     <FinalRankModal />
                     <QueueModel />
                     <ServerModel />
                     <LeaguePointModal />
                     <WarningModal />
-
                 </div>
             </React.Fragment>
         </UserOrderContext.Provider>
