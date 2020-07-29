@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { UserOrderContext } from "./SelectionCard";
 
-function SoloNetWins() {
+function DuoNetWins() {
   const context = useContext(UserOrderContext);
 
   const toogleModelQueue = (event) => {
@@ -104,4 +104,4 @@ function SoloNetWins() {
   );
 }
 
-export default SoloNetWins;
+export default DuoNetWins;
