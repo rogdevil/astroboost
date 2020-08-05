@@ -19,6 +19,12 @@ import SoloNormal from "./SoloNormal";
 import DuoNormal from "./DuoNormal";
 import DuoNetWins from "./DuoNetWins";
 import PaymentCard from "../Booster/PaymentCard";
+import { Elements } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
+
+const stripePromise = loadStripe(
+  "pk_test_51HATQ7G57VchbKcRkL4vUoSv2LFAAHmPxuczFbNVlfWdBBDgHxZe3mBjjrKqBVCd3KyAoKfWm6YFRrAzyatuhCA800a0O8EQb9"
+);
 
 export const UserOrderContext = createContext({});
 
@@ -152,29 +158,31 @@ export function SelectionCard() {
   return (
     <UserOrderContext.Provider value={UserOrderInfo}>
       <React.Fragment>
-        <div className="selection-card-container">
-          <Switch>
-            <Route exact path="/boosting/solo">
-              <SoloNormal />
-            </Route>
-            <Route exact path="/boosting/solo/netwin">
-              <SoloNetWins />
-            </Route>
-            <Route exact path="/boosting/duo">
-              <DuoNormal />
-            </Route>
-            <Route exact path="/boosting/duo/netwin">
-              <DuoNetWins />
-            </Route>
-          </Switch>
-          <PaymentCard />
-          <InitialRankModal />
-          <FinalRankModal />
-          <QueueModel />
-          <ServerModel />
-          <LeaguePointModal />
-          <WarningModal />
-        </div>
+        <Elements stripe={stripePromise}>
+          <div className="selection-card-container">
+            <Switch>
+              <Route exact path="/boosting/solo">
+                <SoloNormal />
+              </Route>
+              <Route exact path="/boosting/solo/netwin">
+                <SoloNetWins />
+              </Route>
+              <Route exact path="/boosting/duo">
+                <DuoNormal />
+              </Route>
+              <Route exact path="/boosting/duo/netwin">
+                <DuoNetWins />
+              </Route>
+            </Switch>
+            <PaymentCard />
+            <InitialRankModal />
+            <FinalRankModal />
+            <QueueModel />
+            <ServerModel />
+            <LeaguePointModal />
+            <WarningModal />
+          </div>
+        </Elements>
       </React.Fragment>
     </UserOrderContext.Provider>
   );

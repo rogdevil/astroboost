@@ -5,6 +5,9 @@ import Home from "./Components/Home";
 import MobileNav from "./Components/MobileNav";
 import { Switch, Route } from "react-router-dom";
 import Booster from "./Components/Booster";
+import Stripe from "./Components/stripe";
+import Faq from "./faq/Faq";
+import ContactUs from "./ContactUs";
 
 function App() {
   return (
@@ -19,9 +22,7 @@ function App() {
           <Booster />
         </Route>
         <Route path="/faq">
-          <h1 className="red" style={{ marginTop: "9em" }}>
-            welcome to faq
-          </h1>
+          <Faq />
         </Route>
         <Route path="/login">
           <h1 className="red" style={{ marginTop: "9em" }}>
@@ -34,9 +35,10 @@ function App() {
           </h1>
         </Route>
         <Route path="/contactus">
-          <h1 className="red" style={{ marginTop: "9em" }}>
-            welcome to contactus
-          </h1>
+          <ContactUs />
+        </Route>
+        <Route path="/pay">
+          <Stripe />
         </Route>
       </Switch>
     </React.Fragment>

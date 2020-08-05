@@ -2,11 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { SelectionCard } from "./Booster Page/SelectionCard";
 import { Switch, Route } from "react-router-dom";
-import PaymentCard from "./Booster/PaymentCard";
 
 const Booster = (props) => {
   return (
-    <div className="boosting-page">
+    <div className="boosting-page animatorFade">
       <div className="boosting-heading">
         <ul>
           <li>

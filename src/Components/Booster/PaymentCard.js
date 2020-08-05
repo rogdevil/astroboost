@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { UserOrderContext } from "../Booster Page/SelectionCard";
 import Button from "../Button";
+import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 
 function PaymentCard() {
   const context = useContext(UserOrderContext);
@@ -9,6 +10,39 @@ function PaymentCard() {
       ? context.extraPayment.set(false)
       : context.extraPayment.set(true);
   };
+
+  const stripe = useStripe();
+  const elements = useElements();
+
+  const handleSubmit = async (event) => {
+    // Block native form submission.
+    event.preventDefault();
+
+    if (!stripe || !elements) {
+      // Stripe.js has not loaded yet. Make sure to disable
+      // form submission until Stripe.js has loaded.
+      return;
+    }
+
+    // Get a reference to a mounted CardElement. Elements knows how
+    // to find your CardElement because there can only ever be one of
+    // each type of element.
+    const cardElement = elements.getElement(CardElement);
+    console.log(cardElement);
+
+    // Use your card Element with other Stripe.js APIs
+    const { error, paymentMethod } = await stripe.createPaymentMethod({
+      type: "card",
+      card: cardElement,
+    });
+
+    if (error) {
+      console.log("[error]", error);
+    } else {
+      console.log("[PaymentMethod]", paymentMethod);
+    }
+  };
+
   return (
     <div className="payment-card">
       <div className="payment-card-header">
@@ -97,9 +131,7 @@ function PaymentCard() {
             Extra perks you get
           </p>
           <p className="white">1. Choose your Roles & Champions</p>
-          <p className="white">2. Choose your Summoner Spells</p>
           <p className="white">3. VPN + Encryption Protection</p>
-          <p className="white">4. 100% goal achievement</p>
         </div>
 
         <div
@@ -129,8 +161,25 @@ function PaymentCard() {
             <span class="slider round"></span>
           </label>
         </div>
-
-        <Button name="Proceed to pay" />
+        <div className="custom-designed-stripe-form">
+          <CardElement
+            options={{
+              style: {
+                base: {
+                  fontSize: "16px",
+                  color: "#424770",
+                  "::placeholder": {
+                    color: "#aab7c4",
+                  },
+                },
+                invalid: {
+                  color: "#9e2146",
+                },
+              },
+            }}
+          />
+        </div>
+        <Button name="Proceed to pay" click={handleSubmit} />
       </div>
     </div>
   );
