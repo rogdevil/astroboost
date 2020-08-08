@@ -9,13 +9,13 @@ const MobileNav = (props) => {
     				<Link to="/">Home</Link>
     			</li>
     			<li>
-    				<Link to="/aboutus">About Us</Link>
+    				<Link to="/boosting/solo">Boosting</Link>
     			</li>
     			<li>
-    				<Link to="/events">Events</Link>
+    				<Link to="/faq">FAQ</Link>
     			</li>
     			<li>
-    				<Link to="/contact">Contact Us</Link>
+    				<Link to="/contactus">Contact Us</Link>
     			</li>
                 <li>
                     <Link to="/login">Login</Link>
