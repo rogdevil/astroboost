@@ -15,7 +15,7 @@ $(document).ready(() => {
     console.log("scrolling");
   });
   
-  $('.mobile-boosting-selector').on('click', () => {
+  $('#mobile-boosting-selector').on('click', () => {
     if($('#mobile-boosting-list').css('display') !== 'none') {
       $('#mobile-boosting-list').hide('slow')
       $('.fa-arrow-up').hide('fast')

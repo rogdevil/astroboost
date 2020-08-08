@@ -9,10 +9,10 @@ const Booster = (props) => {
   return (
     <div className="boosting-page animatorFade">
       <div className="boosting-heading">
-        <div className="mobile-boosting-selector">
-          <p className="red para">Select Boosting</p>
-          <i class="fas fa-arrow-down arrow" ></i>
-          <i class="fas fa-arrow-up arrow" style={{display: 'none'}}></i>
+        <div className="mobile-boosting-selector" id='mobile-boosting-selector'>
+          <p className="red para" id='mobile-boosting-selector'>Select Boosting</p>
+          <i class="fas fa-arrow-down arrow" id='mobile-boosting-selector' ></i>
+          <i class="fas fa-arrow-up arrow" id='mobile-boosting-selector' style={{display: 'none'}}></i>
         </div>
         <ul id="mobile-boosting-list" style={{display: 'none'}}>
           <li>
