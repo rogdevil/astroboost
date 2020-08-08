@@ -1,24 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { SelectionCard } from "./Booster Page/SelectionCard";
 import { Switch, Route } from "react-router-dom";
 
 const Booster = (props) => {
+  
+  const [boostingType, setBoostingType] = useState("Solo Normal");
+
+  const changeBoosting = (event) => {
+    setBoostingType(event.target.value);
+  }
+
   return (
     <div className="boosting-page animatorFade">
       <div className="boosting-heading">
+        <div className="mobile-boosting-selector">
+          <p>Select your boosting</p>
+          <i className="fa fas-stream"></i>
+        </div>
         <ul>
           <li>
-            <Link to="/boosting/solo">Solo Normal</Link>
+            <Link to="/boosting/solo" value="Solo Normal" onClick={changeBoosting}>Solo Normal</Link>
           </li>
           <li>
-            <Link to="/boosting/solo/netwin">Solo Net Wins</Link>
+            <Link to="/boosting/solo/netwin" value="Solo Net Wins" onClick={changeBoosting}>Solo Net Wins</Link>
           </li>
           <li>
-            <Link to="/boosting/duo">Duo Normal</Link>
+            <Link to="/boosting/duo" onClick={changeBoosting}>Duo Normal</Link>
           </li>
           <li>
-            <Link to="/boosting/duo/netwin">Duo Net Wins</Link>
+            <Link to="/boosting/duo/netwin" onClick={changeBoosting}>Duo Net Wins</Link>
           </li>
         </ul>
       </div>
